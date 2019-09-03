@@ -1,6 +1,6 @@
-## REACT FRONT END WITH WEBPACK AND BABEL
+# REACT FRONT END WITH WEBPACK AND BABEL
 
-# INSTALL
+### INSTALL
 - install all dependencies run `npm i --save-dev` or `yarn install`
-# CONFIGURATION
+### CONFIGURATION
 - The files webpack.config.js [(https:)]

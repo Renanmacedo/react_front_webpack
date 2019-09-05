@@ -1,7 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import  * as ReactDOM from 'react-dom';
-import Routes from './routes';
-
+import Internal from './app/component/internal/internal';
+import Home from './app/screen/home';
 const root = document.querySelector("#root");
+ReactDOM.render(
+<Internal>
+    <Home />
+</Internal>
+, root);
 
-ReactDOM.render(<Routes />, root);
+console.log(window.location.pathname);

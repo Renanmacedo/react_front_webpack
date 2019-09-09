@@ -1,0 +1,15 @@
+.rn-buttom {
+    min-width: 64px;
+    line-height: 34px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: visible;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0;
+    padding: 0 16px;
+}
+.rn-button .rn-button-primary a
+,.rn-button .rn-button-primary button span {
+    color: #fff !important;
+}

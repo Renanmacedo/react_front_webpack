@@ -1,14 +1,18 @@
 
+.header--wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 .header--navigation {
-    @include flex; 
+    
+    @include flex;
     align-items: center;
-    max-height: 35px;
-    background-color: rgb(48, 145, 201);
-    padding: 10px;
-
-    li {
-        margin: 5px;
-        list-style-type: none;
-        color: #fff;
-    }  
+    padding: 9px 16px;
+    a {
+        line-height: 34px;
+        min-width: 64px;
+        cursor: pointer;
+    }
 }

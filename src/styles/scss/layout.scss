@@ -1,0 +1,22 @@
+@import "./variables.scss";
+.content {
+    @include flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 58px;
+    bottom: 0;
+}
+nav.header--navigation {
+    background-color: $secodary-dark;
+    color: #fff;
+}
+.--footer
+,nav.header--navigation
+,div.sidemenu--container div.sidemenu--inner {
+    background-color: $secodary-dark;
+}
+div.sidemenu--container div.sidemenu--inner {
+    
+    padding: 10px;
+}

@@ -1,4 +1,5 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin'),
+MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path')
 const rootPath = 'src';
 const buidPath = 'dist';
@@ -8,7 +9,7 @@ module.exports = {
     devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, buidPath) 
-        ,filename: 'bundle.js'
+        ,filename: '[hash].bundle.js'
     },
     module: {
         rules: [
@@ -28,20 +29,22 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/i
-                ,use: [{
-                    loader: "style-loader"
-                }, {
-                    loader: "css-loader"
-                }, {
-                    loader: "sass-loader"
-                }]
+                ,use: [
+                    process.env.NODE_ENV !== 'production'? "style-loader" : MiniCssExtractPlugin.loader
+                    ,"css-loader"
+                    ,"sass-loader"
+                ]
             }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
             template:  path.resolve(__dirname, 'src') + '/index.html'
-        })
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'style.css',
+            chunkFilename: '[id].css',
+          })
     ],
     devServer: {
         compress: true

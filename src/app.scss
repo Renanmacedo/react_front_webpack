@@ -1,3 +1,7 @@
+@import "./styles/scss/reset.scss";
 @import "./styles/scss/mixis.scss";
+@import "./styles/scss/layout.scss";
 @import "./app/component/header/header.scss";
-@import "./app/component/footer/footer.scss"
+@import "./app/component/footer/footer.scss";
+@import "./app/component/sidemenu/sidemenu.scss";
+@import "./styles/scss/buttons.scss";

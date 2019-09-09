@@ -1,0 +1,18 @@
+
+.sidemenu--container{
+    overflow-x: hidden;
+    width: 14vw;
+    z-index: 1;
+    position: fixed;
+    overflow-x: hidden;
+    left: 0;
+    top: 0;
+    background: #fff;
+    height: 100%;
+    border-right: .8px solid #ececec;
+    box-sizing: border-box;
+    box-shadow: -15px -6px 20px 15px rgba(0, 0, 0, .1), -7px 79px 20px 7px rgba(0,0,0,.122);
+    .sidemenu--inner {
+        height: 110px;
+    }
+}

@@ -1,13 +1,14 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom'
 export default  (props) => (
-    <nav>
-        <ul className="header--navigation">
-        {
-            props.items.map((item, i) => (
-                <li key={i.toString()}>{item.title}</li>   
-            ))
-        }
-        </ul>
-    </nav>
+    <div className="header--wrapper">
+        <nav className="header--navigation">
+            {
+                props.items.map((item, i) => (
+                    <Link className={"rn-button rn-button-primary"} key={i.toString()} to={item.to}>{item.title}</Link>   
+                ))
+            }
+        </nav>
+    </div>
 );

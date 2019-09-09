@@ -1,15 +1,52 @@
-.rn-buttom {
+.rn-button {
     min-width: 64px;
     line-height: 34px;
     cursor: pointer;
-    white-space: nowrap;
-    overflow: visible;
-    border-radius: 4px;
-    display: inline-block;
-    margin: 0;
-    padding: 0 16px;
+    overflow: hidden;
+    outline: none;
+    border-radius: 8px;
 }
-.rn-button .rn-button-primary a
+.rn-button-primary {
+    background: $primary;
+}
+.rn-button-secondary {
+    background: $secodary;
+}
+.rn-button-secondary-dark {
+    background: $secodary-dark;
+}
+.rn-button .rn-button-clear {
+    background: transparent;
+}
+
+button.rn-button {
+    border-radius: 4px;
+    margin: 0;
+    border: 0;
+    padding: 8px 16px;
+    box-shadow: 2px 1px 6px rgba(0,0,0,.4);
+}
+.rn-button-primary-dark
+,.rn-button-secondary
+,.rn-button-secondary-dark
+,.rn-button .rn-button-primary a
+,.rn-button .rn-button-primary button
 ,.rn-button .rn-button-primary button span {
     color: #fff !important;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+.ripple-primary:hover {
+    background: $primary radial-gradient(circle, transparent 1%, $primary 1%) center/15000%;    
+}
+.ripple-secondary:hover {
+    background: $secodary-dark radial-gradient(circle, transparent 1%, $secodary-dark 1%) center/15000%;    
+}
+.ripple:active {
+    background-color: #ccc;
+    transition: background 0s;
+    background-size: 100%; 
 }

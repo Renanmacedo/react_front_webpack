@@ -1,0 +1,23 @@
+
+@function lumance($themeColor){
+    $red: nth($linear-channel-values, red($themeColor) + 1 );
+    $green: nth($linear-channel-values, green($themeColor) + 1);
+    $blue: nth($linear-channel-values, blue($themeColor) +1);
+    @return 0.2126 * $red  + 0.7152  * $green + .0722 * $blue;
+}
+@function contrastRatio($back, $front){
+    $backLum: lumance($back) + .05;
+    $foreLum: lumance($front) + .05;
+    @return max($backLum, $foreLum) / min($backLum, $foreLum);
+}
+@function contrast-color-theme($themeColor) {
+    $lightColor: contrastRatio($themeColor, white);
+    $darkColor: contrastRatio($themeColor, black); 
+    @if ( $lightColor > $darkColor ) {
+        @return white;
+    }
+    @else{
+        @return black;
+    }
+}
+

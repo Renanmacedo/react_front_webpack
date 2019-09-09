@@ -6,7 +6,10 @@ export default  (props) => (
         <nav className="header--navigation">
             {
                 props.items.map((item, i) => (
-                    <Link className={"rn-button rn-button-primary"} key={i.toString()} to={item.to}>{item.title}</Link>   
+                    <Link 
+                        className={"rn-button ripple ripple-secondary"} 
+                        key={i.toString()} 
+                        to={item.to}>{item.title}</Link>   
                 ))
             }
         </nav>

@@ -1,15 +1,22 @@
-@import "./variables.scss";
-.content {
-    @include flex;
+
+.content {    
     position: absolute;
     left: 0;
-    right: 0;
+    right: 2%;
     top: 58px;
     bottom: 0;
 }
+.content .content-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 98%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 nav.header--navigation {
     background-color: $secodary-dark;
-    color: #fff;
+    color: contrast-color-theme($primary);
 }
 .--footer
 ,nav.header--navigation

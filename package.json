@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development && sass --watch src/styles/scss:src/styles/css",
-    "build": "rm -rf dist/ && webpack --mode production ",
+    "start": "webpack-dev-server --mode development",
+    "build": "rm -rf dist/ && webpack --mode production",
     "start_sass": "sass --watch src/styles/scss:src/styles/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

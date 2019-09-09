@@ -5,7 +5,7 @@ const rootPath = 'src';
 const buidPath = 'dist';
 const applicationPath = path.resolve(__dirname, rootPath);
 module.exports = {
-    entry: [ applicationPath + '/app.js', applicationPath + '/app.scss'],
+    entry: [ applicationPath + '/app.js', applicationPath + '/style.scss'],
     devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, buidPath) 
@@ -30,7 +30,8 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i
                 ,use: [
-                    process.env.NODE_ENV !== 'production'? "style-loader" : MiniCssExtractPlugin.loader
+                    "style-loader"
+                    ,MiniCssExtractPlugin.loader
                     ,"css-loader"
                     ,"sass-loader"
                 ]
@@ -42,8 +43,8 @@ module.exports = {
             template:  path.resolve(__dirname, 'src') + '/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: 'style.css',
-            chunkFilename: '[id].css',
+            filename: '[hash].style.css',
+            chunkFilename: '[hash].style.css',
           })
     ],
     devServer: {

@@ -1,4 +1,4 @@
-.card {
+.rn-card {
     max-height: 510px;
     background: #fff;
     box-sizing: border-box;
@@ -6,13 +6,13 @@
     border-radius: 5px;
     width: 350px;
     padding: 10px;
-    @include xs() {
-        width: 100%;
-    }
-    @include sm() {
-        width: 30%;
-    }
-    @include md() {
-        width: 40%;
+}
+.rn-card-header {
+    max-height: 72px;
+    overflow: hidden;
+    .rn-card-header-title {
+        line-height: 34px;
+        font-weight: bold;
+        font-size: 1.6rem;
     }
 }

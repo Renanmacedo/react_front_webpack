@@ -1,18 +1,11 @@
-
-.content {    
-    position: absolute;
-    left: 0;
-    right: 2%;
-    top: 58px;
-    bottom: 0;
-}
-.content .content-wrapper {
+.content-wrapper {
     position: relative;
     display: inline-block;
-    width: 98%;
-    height: auto;
-    margin-left: 10px;
-    margin-right: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 16px;
+    padding: 20px;
+    overflow-y: auto; 
 }
 nav.header--navigation {
     background-color: $secodary-dark;

@@ -31,6 +31,8 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
+    "rxjs": "^6.5.3",
     "sass": "^1.23.0-module.beta.1",
     "webpack-dev-server": "^3.8.0"
   }

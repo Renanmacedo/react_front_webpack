@@ -7,6 +7,7 @@
     padding: 20px;
     overflow-y: auto; 
 }
+.header-wrapper,
 nav.header--navigation {
     background-color: $secodary-dark;
     color: contrast-color-theme($primary);
@@ -17,6 +18,5 @@ nav.header--navigation {
     background-color: $secodary-dark;
 }
 div.sidemenu--container div.sidemenu--inner {
-    
     padding: 10px;
 }

@@ -1,19 +1,33 @@
 
-.header--wrapper {
+.header {
     position: fixed;
-    top: 0;
+    top: 0px;
+    z-index: 4;
+    height: 112px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateY(0);
+    .header-wrapper{
+        height: 75px;
+        width: 100%;
+    }
+}
+.header--navigation {
+    position: absolute;
     left: 0;
     right: 0;
     z-index: 2;
-}
-.header--navigation {
-    
-    @include flex;
-    align-items: center;
-    padding: 9px 16px;
+    top: 35px;
+    margin-left: 10px; 
+
     a {
-        line-height: 34px;
-        min-width: 64px;
+        width: 56px;
+        max-width: 56px;
+        padding: 8px 9px;
         cursor: pointer;
     }
+}
+nav {
+    display: block;
 }

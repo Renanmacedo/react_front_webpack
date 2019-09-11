@@ -2,7 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 export default  (props) => (
-    <div className="header--wrapper">
+    <header className="header">
+    <div className="header-wrapper"></div>
         <nav className="header--navigation">
             {
                 props.items.map((item, i) => (
@@ -13,5 +14,5 @@ export default  (props) => (
                 ))
             }
         </nav>
-    </div>
+    </header>
 );

@@ -17,4 +17,8 @@ export const link = [
         to: '/'
         ,title: 'Home'
     },
+    {
+        to: '/cadastro'
+        ,title: 'Cadatro'
+    },
 ]

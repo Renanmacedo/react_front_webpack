@@ -1,15 +1,18 @@
-@import "./styles/scss/variables.scss";
-@import "./styles/scss/mixis.scss";
-@import "./styles/scss/functions/functions.scss";
+@import "./assets/styles/scss/variables.scss";
+@import "./assets/styles/scss/mixis.scss";
+@import "./assets/styles/scss/functions/functions.scss";
 @import "./app/component/header/header.scss";
 @import "./app/component/footer/footer.scss";
 @import "./app/component/sidemenu/sidemenu.scss";
-@import "./styles/scss/layout.scss";
-@import "./styles/scss/buttons.scss";
-@import "./styles/scss/reset.scss";
+@import "./assets/styles/scss/layout.scss";
+@import "./assets/styles/scss/buttons.scss";
+@import "./assets/styles/scss/reset.scss";
 
 /** COMPONENTS IMPLEMATATIOS STATYLE **/
-@import "./styles/scss/card/card.scss";
+@import "./assets/styles/scss/card/card.scss";
+@import './assets/styles/scss/input/input.scss';
+@import './assets/styles/scss/toolbar/toolbar.scss';
 /** COMPONENT STYLES */
 @import "./app/screen/home/home.scss";
+
 

@@ -1,0 +1,10 @@
+$border: none !default;
+.rn-input {
+    display: flex;
+    justify-content: flex-start;
+    border: $border;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 10px;
+    height: 40px;
+}

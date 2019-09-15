@@ -1,0 +1,12 @@
+.scroll-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: auto;
+}
+.scrollabel-x {
+    overflow-x: auto;
+}
+.scrollabel-y {
+    overflow-y: auto;
+}

@@ -9,10 +9,13 @@
 @import "./assets/styles/scss/reset.scss";
 
 /** COMPONENTS IMPLEMATATIOS STATYLE **/
+@import "./assets/styles/scss/scroll/scroll.scss";
 @import "./assets/styles/scss/card/card.scss";
 @import './assets/styles/scss/input/input.scss';
 @import './assets/styles/scss/toolbar/toolbar.scss';
+
 /** COMPONENT STYLES */
 @import "./app/screen/home/home.scss";
+
 
 

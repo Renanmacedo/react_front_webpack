@@ -8,24 +8,29 @@
 }
 .rn-button-primary {
     background: $primary;
+    border: 1px solid $primary;
 }
 .rn-button-secondary {
     background: $secodary;
+    border: 1px solid $secodary;
 }
 .rn-button-secondary-dark {
     background: $secodary-dark;
+    border: 1px solid $secodary-dark;
 }
-.rn-button .rn-button-clear {
+.rn-button .rn-button-clear, .rn-button-outline {
     background: transparent;
 }
-
+.rn-button .rn-button-outline span, a {
+    color: #000;
+}
 button.rn-button {
     border-radius: 4px;
     margin: 0;
-    border: 0;
-    padding: 8px 16px;
-    box-shadow: 2px 1px 6px rgba(0,0,0,.4);
+    padding: 8px 16px;    
 }
+//box-shadow: 2px 1px 6px rgba(0,0,0,.4);
+
 .rn-button-primary-dark
 ,.rn-button-secondary
 ,.rn-button-secondary-dark
@@ -40,7 +45,7 @@ button.rn-button {
     transition: background 0.8s;
 }
 .ripple-primary:hover {
-    background: $app-theme radial-gradient(circle, transparent 1%, $app-theme 1%) center/15000%;    
+    background: #ececec radial-gradient(circle, transparent 1%, #ececec 1%) center/15000%;    
 }
 .ripple-secondary:hover {
     background: $app-theme radial-gradient(circle, transparent 1%, $app-theme 1%) center/15000%;    

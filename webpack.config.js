@@ -23,9 +23,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'file-loader'
-                ,options: {
-                    publicPath: 'assets',
-                }
+                ,options: {}
             },
             {
                 test: /\.html$/

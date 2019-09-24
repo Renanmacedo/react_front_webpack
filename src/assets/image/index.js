@@ -1,14 +1,18 @@
 
-import banana from  './banana.png';
+import foods from  './foods.png';
 import fish from './fish.png';
 import meat_ from './meat.png';
-import watermelon from './watermelon.png';
-import apple from './apple.png'
+import salami from './salami.png';
+import harvest from './harvest.png';
+import apple from './apple_green.png';
+import drinks from './drinks.png'
 export default {
-    corrida: './corrida.jpg'
-    ,banana: banana
+    corrida: './foods.png'
+    ,foods: foods
     ,fish: fish
     ,meat: meat_
-    ,watermelon: watermelon
+    ,salami: salami
+    ,harvest: harvest
     ,apple: apple
+    ,drinks: drinks
 }

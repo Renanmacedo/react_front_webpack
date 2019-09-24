@@ -6,12 +6,14 @@
     position: relative;
     align-items: center;
     display: flex;
+    justify-content: center;
     line-height: 30px;
+    border-radius: 50%;
+    background: $app-theme;
     flex-direction: column;
     img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
+        width: 60px;
+        height: 60px;
     }
 }
 .nr-card-rouded:active, .nr-card-rouded:focus {

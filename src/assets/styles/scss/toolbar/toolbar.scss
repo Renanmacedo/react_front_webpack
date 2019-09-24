@@ -1,10 +1,13 @@
 .rn-toolbar {
-    background-color: $app-theme;
+    background-color: #fff;
     color: contrast-color-theme($app-theme);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     flex: 1;
     padding: 5%;
+    border-bottom: 1px solid #666666;
 }
 .rn-toolbar-title {
     line-height: 1.2rem;

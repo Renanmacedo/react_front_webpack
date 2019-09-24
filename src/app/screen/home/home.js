@@ -27,25 +27,13 @@ export default class Home extends Component {
         }
     }
     render() {
-        generateAllPosibilits();
-        getMilharesToday();
-        let segunda = milharesToday.slice(0,25);
-        let terca = milharesToday.slice(25,50);
-        let quarta = milharesToday.slice(50,75);
-        let quinta = milharesToday.slice(75,100);
-        let sexta = milharesToday.slice(100,125);
-        let sabado = milharesToday.slice(125,150);
-        let segundaOnzeHoras = segunda.slice(0,5);
-        let segundaDuasHoras  = segunda.slice(5,10);
-        let segundaQuartorzeHoras = segunda.slice(10,15);
-        let segundaDezeseisHora = segunda.slice(15,20);
-        let segundaVinteHoras = segunda.slice(20,25);
-
-        console.log("SEGUNDA 11 H ", segundaOnzeHoras);
-        console.log("SEGUNDA 14 H ", segundaDuasHoras);
-        console.log("SEGUNDA 16 H ", segundaQuartorzeHoras);
-        console.log("SEGUNDA 18 H ", segundaDezeseisHora);
-        console.log("SEGUNDA 21 H ", segundaVinteHoras);
+        if(getDayOfWeek() != 0 ){
+            generateAllPosibilits();
+            getMilharesToday();
+            getByHours();
+        }else {
+            console.log('OH ! HOJE É DIA DE DESCANSAR, MAS AMANHÃ TEM MAIS', getDayOfWeek());
+        }
         return (
             <Content>
                 <Toolbar style={{textAlign:  "center"}}>
@@ -86,11 +74,10 @@ export default class Home extends Component {
 // posibilidades 4 * 100 * 25, onde 4 são a quantida de que
 //cada grupo possui, 100 é o total de numeros nos grupos e
 // 25 são todos os grupos
-const dias = ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado'];
+const dias = ['Domingo','Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado'];
 const quantidadeByGruop = 4;
 const allNumbers = 100; // 100 = 00
 const quantidadeGruop = 25;
-const quantidade = ( (Math.pow(5, 2) ) * 6);
 
 const q = quantidadeByGruop * quantidadeGruop * 100;
 const milharesSorteadasPrimeiro = []; // 1 semana 
@@ -119,7 +106,8 @@ const generate = ()  =>{
 const checkIndex = n => arr.findIndex(numb => numb == n);
 const getMilharesToday = () => {
     let count = 0;
-    while(count < quantidade) {
+    let quantidadeToday = generateByDays();
+    while(count < quantidadeToday) {
         let indexMilhar = Math.floor(Math.random() * 10000);
         let milhar = arr[indexMilhar];
         let index = milharesSorteadasSecToFive.findIndex(numb => numb == milhar);
@@ -132,8 +120,64 @@ const getMilharesToday = () => {
         count++;
     }
 }
+const getByHours = () => {
+    const quantidaToday = generateByDays();
+    
+    const totalofDay = Math.floor(quantidaToday / 6);
+    const fator = totalofDay % 6 == 0 ? 6 : 5;
+    let count = 0;
+    let fatoIncremental = 0;
+    let _milhares = milharesToday.slice(generatePositionByDay().start, generatePositionByDay().end);
+    let milharesByHours = [];
+    
+    while(count < fator) {
+        
+        milharesByHours.push( { 
+            milhares: _milhares.slice(fatoIncremental, fatoIncremental + fator)
+        })
+        fatoIncremental += fator;
+        count ++;
+    }
+    milharesByHours = [...milharesByHours, {dia: dias[getDayOfWeek()]}]
 
-const combineArray = () => {
+    console.log(milharesByHours);
+    
 
-
+}
+/**
+ * 
+ */
+const generateByDays = () => {
+    const today = getDayOfWeek();
+    return  today == 0 ? 0 : today == 3 || today == 6 ? ( ( Math.pow(6,2) ) * 5 ) : ( ( Math.pow(5, 2) ) * 6 );
+}
+/**
+ * 
+ */
+const isFederal = () => {
+     const day = getDayOfWeek();
+    return  day == 3 || day == 6;
+}
+const generatePositionByDay = () => {
+    const today = getDayOfWeek();
+    switch(today) {
+        case 1:
+            return {start: 0, end: 25};
+        case 2:
+            return {start: 25, end: 50};
+        case 3:
+            return {start: 90, end: 120};
+        case 4:
+            return { start: 75, end: 100}
+        case 5:
+            return {start: 100, end: 125};
+        case 6:
+            return {start: 150, end: 180}
+    }
+}
+const getDayOfWeek = () => {
+    return new Date().getDay();
+}
+const getHoursOfDay = () => {
+    return new Date().getHours();
 }

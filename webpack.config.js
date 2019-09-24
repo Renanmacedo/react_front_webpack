@@ -2,13 +2,13 @@ const HtmlWebPackPlugin = require('html-webpack-plugin'),
 MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path')
 const rootPath = 'src';
-const buidPath = 'dist';
+const buildPath = 'dist';
 const applicationPath = path.resolve(__dirname, rootPath);
 module.exports = {
     entry: [ applicationPath + '/app.js', applicationPath + '/style.scss'],
     devtool: 'source-map',
     output: {
-        path: path.resolve(__dirname, buidPath) 
+        path: path.resolve(__dirname, buildPath) 
         ,filename: '[hash].bundle.js'
     },
     module: {

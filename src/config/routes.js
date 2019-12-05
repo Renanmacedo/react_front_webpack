@@ -1,5 +1,5 @@
 import Home from "../app/screen/home/home";
-import Cadastro  from '../app/screen/cadastrar';
+import QuemSomos  from '../app/screen/about/quemsomos';
 export const routes = [
     {
         path: "/",
@@ -7,18 +7,19 @@ export const routes = [
         component: Home
     },
     {
-        path: "/cadastro"
+        path: "/quemsomos"
         ,exac: false
-        ,component: Cadastro
+        ,component: QuemSomos
     }
 ]
-export const link = [ 
+export const link = [
     {
         to: '/'
         ,title: 'Home'
+        ,icon: 'home'
     },
     {
-        to: '/cadastro'
-        ,title: 'Cadatro'
+        to: '/quemsomos'
+        ,title: 'Quem Somos'
     },
 ]

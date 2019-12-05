@@ -1,5 +1,5 @@
 .rn-toolbar {
-    background-color: #fff;
+    background: linear-gradient(to top, $primary-light, $secodary);
     color: contrast-color-theme($app-theme);
     display: flex;
     flex-direction: column;
@@ -8,6 +8,8 @@
     flex: 1;
     padding: 5%;
     border-bottom: 1px solid #666666;
+    max-height: 250px;
+    height: 250px;
 }
 .rn-toolbar-title {
     line-height: 1.2rem;

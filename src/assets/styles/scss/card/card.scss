@@ -1,13 +1,12 @@
 .rn-card {
-    max-height: 510px;
     background: #fff;
     box-sizing: border-box;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-    border-radius: 5px;
-    width: 350px;
+    border-radius: 4kspx;
+    display: block;
+    padding: 16px;
 }
 .rn-card-header {
-    max-height: 72px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -35,8 +34,10 @@
     }
 }
 .nr-card-image {
-    height: 194px;
-    width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 .nr-card-image-thumbnail {
     width: 80px;

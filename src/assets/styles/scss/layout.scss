@@ -1,9 +1,7 @@
 
 .content-wrapper {
-    overflow-y: auto; 
-    position: relative;
     box-sizing: border-box;
-    margin-top: 20px;
+    margin-left: 20%;
 }
 .header-wrapper,
 nav.rn-navigation,
@@ -15,10 +13,8 @@ nav.rn-navigation,
 .rn-shadow {
     box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.4), 0px -1px 30px -4px rgba(0, 0, 0, 0.14), 0px -6px 10px 0px rgba(0, 0, 0, 0.18);
 }
-div.sidemenu--container div.sidemenu--inner {
-    padding: 15px;
-}
 #root {
     margin: 0;
-    background: #fff;
+    height: 100vh;
+    overflow: auto;
 }

@@ -29,7 +29,6 @@ export default  class Header extends  React.Component {
     render(){
         return (
             <header className="header-wrapper">
-                <div className="rn-shadow">
                     <nav className="rn-navigation">
                         <a className={"rn-navigation-item"} href="#home" onClick={event => this.handleEvent(event)}>
                             Home
@@ -49,7 +48,6 @@ export default  class Header extends  React.Component {
                     ))sele
                 } */}
                     </nav>
-                </div>
             </header>
         )
     }

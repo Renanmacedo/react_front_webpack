@@ -15,7 +15,15 @@ export default class Sidemenu extends Component {
             { this.state.visible && 
                 <div className="sidemenu--container" >
                     <div className="sidemenu--inner">
-                        
+                        <div className="sidemenu--item">
+                            <a>Home</a>
+                        </div>
+                        <div className="sidemenu--item">
+                            <a>Home</a>
+                        </div>
+                        <div className="sidemenu--item">
+                            <a>Home</a>
+                        </div>
                         { this.props.children }
                     </div>
                 </div>
@@ -24,6 +32,6 @@ export default class Sidemenu extends Component {
         )
     }
 }
-Sidemenu.prototype = {
-    items: PropsType.arrayT
+Sidemenu.propsType = {
+    items: PropsType.array
 }

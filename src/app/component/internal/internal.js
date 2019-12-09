@@ -10,13 +10,11 @@ export default (props) => (
     <>
         <Sidemenu />
             <Router>
-                <Header items={Routes.link} />
                 {
                     Routes.routes.map((route, i) => (
                         <Route key={i.toString()} path={route.path} component={route.component} exact={route.exac} />
                     ))
                 }
             </Router>
-        <Footer /> 
     </>
 )

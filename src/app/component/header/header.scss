@@ -13,21 +13,32 @@
     .rn-navigation-item {
         padding: 10px 8px;
         margin: .25em .0;
+
+    }
+    .rn-navigation-item-selected {
+        display: inline-block;
         &::after {
             content: "";
-            width: 0px;
+            width: 100%;
             background: #fff;
             display: block;
             height: 2px;
-            transition: width .3s;
-            margin: .10em 0;
+            animation: fadeIn .5s ease-in;
         }
-        &:hover::after {
-            width: 100%;
-        }
-        &:active {
-            background-color: $secodary;
-            
-        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    50% {
+        opacity: .5;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }

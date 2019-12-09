@@ -1,7 +1,7 @@
 
 .sidemenu--container{
     overflow-x: hidden;
-    width: 14vw;
+    width: 20%;
     z-index: 1;
     position: fixed;
     overflow-x: hidden;
@@ -14,5 +14,9 @@
     box-shadow: -15px -6px 20px 15px rgba(0, 0, 0, .1), -7px 79px 20px 7px rgba(0,0,0,.122);
     .sidemenu--inner {
         height: 110px;
+        padding: 5px;
+    }
+    .sidemenu--item{
+        
     }
 }

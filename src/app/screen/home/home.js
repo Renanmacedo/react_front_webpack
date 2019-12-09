@@ -25,11 +25,7 @@ export default class Home extends Component {
             ]
         }
     }
-    UNSAFE_componentWillMount() {
-        let element   = document.getElementById('root');
-        element.addEventListener('scroll', event => console.log(event))
-        createGesture('scroll', document, event => console.log(event))
-    }
+    UNSAFE_componentWillMount() {}
     renderItems() {
         let items = Array.from([10, 4,8, 9, 22, 64]);
         return items.map((element, index )=> (
@@ -47,17 +43,17 @@ export default class Home extends Component {
                     <h3 className="rn-toolbar-title">Landing Page</h3>
                 </Toolbar>
                 <div style={{margin: "0px 10px"}}></div>
-                <section id="home"> 
+                <section id="home" style={{ marginLeft: '15px'}}>
                     <FlexLayout flexLayout={"row wrap"}>
                         { this.renderItems() }
                     </FlexLayout>
                 </section>
                 <section id="quemsomos">
-                    <Card source={"https://via.placeholder.com/150x100.png"}>
-                        <div>
-                            <p>Card</p>
-                        </div>
-                    </Card>
+                    <div style={{textAlign: 'center'}}>
+                        <h2 style={{fontSize: '1.2em', color: '#868686'}}>Quem Somos</h2>
+                    </div>
+
+                    <div className="text-left"></div>
                 </section>
             </Content>
         )

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Content  from '../../component/content/content'
 export default class QuemSomos extends Component {
     constructor(props){
         super(props);
@@ -7,9 +7,9 @@ export default class QuemSomos extends Component {
 
     render(){
         return (
-            <div className="content">
+            <Content>
                 <p>Cadastro It's work</p>
-            </div>
+            </Content>
         )
     }
 }

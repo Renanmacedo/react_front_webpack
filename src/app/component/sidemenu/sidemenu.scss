@@ -1,32 +1,72 @@
 
-.sidemenu--container{
-    overflow-x: hidden;
-    width: 20%;
-    z-index: 1;
-    position: fixed;
-    overflow-x: hidden;
+.sidemenu{
+    z-index: 3;
+    position: absolute;
     left: 0;
     top: 0;
-    background: #006064;
-    height: 100%;
-    box-sizing: border-box;
-
-    .sidemenu--inner {
-        margin-top: 10px;
+    bottom: 0;
+    .sidemenu--container {
+        min-height: 100%;
+        background: $secodary-dark;
         display: flex;
-        flex-flow: column;
-    }
-    .sidemenu--item{
-        padding: 10px;
-        cursor: pointer;
-        margin: .39em .0;
-        a {
-            color: #fff;
-            font-size: 1.1em;
+        box-sizing: border-box;
+        flex-flow: wrap;
+        flex-direction: column;
+        transform:  translateX(-174px);
+        transition: transform .3s ease-in-out;
+        .sidemenu--logo {
+            display: block;
+            position: relative;
+            width: 100%;
+            img {
+                width: 150px;
+                height: 45px;
+            }
         }
-        &:hover {
-            background: $secodary-light;
+        .sidemenu--inner {
+            margin-top: 10.5vh;
+            display: flex;
+            z-index: 2;
+            height: calc(100vh - 180px);
+            .sidemenu-inner-items {
+                display: flex;
+                flex-direction: column;
+                margin: auto 0;
+                flex: 1;
+                .sidemenu-list-items {
+                    display: flex;
+                    width: 214px;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                    overflow-y: auto;
+                    .sidemenu--item{
+                        padding: 12px;
+                        margin: .39em .0;
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        span.material-icons {
+                            color: contrast-color-theme($secodary-dark);
+                        }
+                        a {
+                            color: contrast-color-theme($secodary-dark);
+                            font-size: 1.1em;
+                            width: 100%;
+                            padding: 10px;
+                            margin: .15em .19em;
+                        }
+                        &:hover {
+                            background: $primary;
+                            color: contrast-color-theme($primary);
+                        }
+                    }
+                }
+                }
+            }
+            &:hover{
+                transform: translateX(0);
+            }
         }
-
-    }
+        
 }

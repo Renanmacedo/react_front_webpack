@@ -1,21 +1,15 @@
-.nr-card-rouded {
-    width: 100px;
-    height: 100px;
-    margin: 3px 16px;
-    cursor: pointer;
-    position: relative;
-    align-items: center;
+div.header-top-information {
     display: flex;
+    align-items: center;
     justify-content: center;
-    line-height: 30px;
-    border-radius: 50%;
-    background: $app-theme;
-    flex-direction: column;
-    img {
-        width: 60px;
-        height: 60px;
+    flex-flow: column;
+    p {
+        color: #fff;
+        font-size: 1.2em;
+        &:last-child {
+            font-size: 1.7em;
+            font-weight: bold;
+        }
     }
-}
-.nr-card-rouded:active, .nr-card-rouded:focus {
-    transform: scale(1.1);
+
 }

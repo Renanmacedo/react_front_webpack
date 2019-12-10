@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom'
+
 export default  class Header extends  React.Component {
     
     constructor(props) {
@@ -29,25 +29,7 @@ export default  class Header extends  React.Component {
     render(){
         return (
             <header className="header-wrapper">
-                    <nav className="rn-navigation">
-                        <a className={"rn-navigation-item"} href="#home" onClick={event => this.handleEvent(event)}>
-                            Home
-                        </a>
-                        <a className={"rn-navigation-item"} href="#quemsomos" onClick={event => this.handleEvent(event)}>
-                            Quem Somos
-                        </a>
-                        <a className={"rn-navigation-item"} href="#quemsomos" onClick={event => this.handleEvent(event)}>
-                        Contato
-                    </a>
-                {/* {
-                    props.items.map((item, i) => (
-                        <Link 
-                            className={"rn-navigation-item"} 
-                            key={i.toString()} 
-                            to={item.to}>{item.title}</Link>   
-                    ))sele
-                } */}
-                    </nav>
+                    <nav className="rn-navigation"></nav>
             </header>
         )
     }

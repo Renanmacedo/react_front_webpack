@@ -39,22 +39,10 @@ export default class Home extends Component {
     render() {
         return (
             <Content>
-                <Toolbar style={{textAlign:  "center"}}>
-                    <h3 className="rn-toolbar-title">Landing Page</h3>
-                </Toolbar>
-                <div style={{margin: "0px 10px"}}></div>
-                <section id="home" style={{ marginLeft: '15px'}}>
-                    <FlexLayout flexLayout={"row wrap"}>
-                        { this.renderItems() }
-                    </FlexLayout>
-                </section>
-                <section id="quemsomos">
-                    <div style={{textAlign: 'center'}}>
-                        <h2 style={{fontSize: '1.2em', color: '#868686'}}>Quem Somos</h2>
-                    </div>
-
-                    <div className="text-left"></div>
-                </section>
+                <div className="header-top-information">
+                    <p>Seu saldo hoje é</p>
+                    <p>10.000</p>
+                </div>
             </Content>
         )
     }

@@ -21,9 +21,14 @@ module.exports = {
                 }
             },
             {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
+             }
+            ,{
                 test: /\.(png|svg|jpg|gif)$/,
-                loader: 'file-loader'
-                ,options: {}
+                use: {
+                    loader: 'file-loader'
+                }
             },
             {
                 test: /\.html$/
@@ -55,5 +60,6 @@ module.exports = {
     devServer: {
         compress: true
         ,hot: true
+        ,historyApiFallback: true
     }
 };

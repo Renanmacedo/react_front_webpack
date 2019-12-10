@@ -1,13 +1,8 @@
 
 .content-wrapper {
     box-sizing: border-box;
+    margin-top: 8vh;
     margin-left: 20%;
-}
-.header-wrapper,
-nav.rn-navigation,
-.--footer {
-    background-color: $app-theme;
-    color: contrast-color-theme($app-theme);
 }
 /**SHADOW */
 .rn-shadow {

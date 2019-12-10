@@ -1,6 +1,9 @@
 
-import React,{ Component } from 'react';
+import React, { Component } from 'react';
 import PropsType from 'prop-types';
+import images from '../../../assets/image/';
+import { Link } from 'react-router-dom';
+import { Icon } from '@material-ui/core'
 export default class Sidemenu extends Component {
     constructor(props) {
 
@@ -9,25 +12,36 @@ export default class Sidemenu extends Component {
             visible: true
         }
     }
-    render(){
-        return(
+    render() {
+        return (
             <>
-            { this.state.visible && 
-                <div className="sidemenu--container" >
-                    <div className="sidemenu--inner">
-                        <div className="sidemenu--item">
-                            <a>Home</a>
-                        </div>
-                        <div className="sidemenu--item">
-                            <a>Home</a>
-                        </div>
-                        <div className="sidemenu--item">
-                            <a>Home</a>
-                        </div>
-                        { this.props.children }
-                    </div>
-                </div>
-            }
+                {this.state.visible &&
+                    <aside className="sidemenu" >
+                        <aside className="sidemenu--container">
+                            <div className="sidemenu--logo">
+                                <img src={images.logo} alt="image" />
+                            </div>
+                            <div className="sidemenu--inner">
+                                <nav className="sidemenu-inner-items">
+                                    <div className="sidemenu-list-items">
+                                        {
+                                            this.props.items.map((item, i) => (
+                                                <div key={i.toString()} className="sidemenu--item">
+                                                    <Link
+                                                        key={i.toString()}
+                                                        to={item.to}>
+                                                        {item.title}
+                                                    </Link>
+                                                    <Icon >{item.icon}</Icon>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </nav>
+                            </div>
+                        </aside>
+                    </aside>
+                }
             </>
         )
     }

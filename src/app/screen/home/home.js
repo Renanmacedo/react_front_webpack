@@ -4,7 +4,6 @@ import Card from '../../component/card/card';
 import Toolbar from '../../component/toolbar/toolbar'
 import images from '../../../assets/image';
 import FlexLayout from '../../component/flex/flex-layout';
-import { createGesture } from '../../utils/gesture';
 export default class Home extends Component {
     constructor(props){
         super(props);
@@ -42,6 +41,12 @@ export default class Home extends Component {
                 <div className="header-top-information">
                     <p>Seu saldo hoje é</p>
                     <p>10.000</p>
+                </div>
+                <div className="content-items">
+                    <p>Produtos mais vistos</p>
+                    <FlexLayout flexLayout={"row wrap"}>
+                        { this.renderItems() }
+                    </FlexLayout>
                 </div>
             </Content>
         )

@@ -1,35 +1,43 @@
 
 import React from 'react';
-
+import { Icon } from '@material-ui/core'
 export default  class Header extends  React.Component {
     
     constructor(props) {
         super(props);
-    }
-
-    handleEvent(event) {
-        
-        if(this.checkIsSeleced(event.target.classList)) return;
-
-        let nodeNav = event.target.parentNode;
-        for(let i = 0; i < nodeNav.childNodes.length; i++) {
-            if( this.checkIsSeleced(nodeNav.childNodes[i].classList) )
-                nodeNav.childNodes[i].classList.remove('rn-navigation-item-selected');
+        this.state =  {
+            menuVisible: false
         }
-        event.target.classList.add('rn-navigation-item-selected');
-        
     }
-    checkIsSeleced(classList) {
-        let count  = 0;
-        while(classList.length > count) {
-            if(classList[count] === 'rn-navigation-item-selected') return true;
-            count++;
-        }
+    showMenu(event) {
+        let menu = document.getElementById("menu");
+        menu.style.display = "block";
+        this.setState( { menuVisible: true } )
+    }
+    closeMenu(event) {
+        let menu = document.getElementById("menu");
+        let visible = menu.getAttribute('menu-visible');
+        if(visible)
+            menu.style.display = "none";   
+    }
+    componentDidMount() {
+        let element = document.querySelectorAll("span[role='menu']")[0];
+        element.addEventListener('click', evt => setTimeout(() => this.showMenu(evt)))
+        document.addEventListener('click', evt => this.closeMenu(evt))
     }
     render(){
         return (
             <header className="header-wrapper">
-                    <nav className="rn-navigation"></nav>
+                    <nav className="rn-navigation">
+                        <span className="menu-option" role="menu">
+                            <Icon >person</Icon>
+                        </span>
+                        <div className="menu-items menu-items-content" id="menu" menu-visible={this.state.menuVisible.toString()}>
+                            <div className="menu-item"><a href="#">Perfil</a></div>
+                            <div className="menu-item"><a>Configurações</a></div>
+                            <div className="menu-item"><a>Logout</a></div>
+                        </div>
+                    </nav>
             </header>
         )
     }

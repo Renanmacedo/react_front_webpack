@@ -10,37 +10,25 @@
     padding: 10px 16px;
     @include flex;
     align-items: center;
-    .rn-navigation-item {
-        padding: 10px 8px;
-        margin: .25em .0;
-        &:first-child {
-            margin-left: 20%;
+    justify-content: flex-end;
+    position: relative;
+    .menu-items {
+        position: absolute;
+        top: 5%;
+        right: 0;
+        margin: 3%;
+        min-width: 220px;
+        div.menu-item:last-child {
+            a {
+                color: $secodary-light;
+            }
         }
     }
-    .rn-navigation-item-selected {
-        display: inline-block;
-        &::after {
-            content: "";
-            width: 100%;
-            background: #fff;
-            display: block;
-            height: 2px;
-            animation: fadeIn .5s ease-in;
-        }
+    .menu-items-content {
+        display: none;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.14), 0 1px 4px 1px rgba(0, 0, 0, 0.12);
     }
-}
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    50% {
-        opacity: .5;
-        transform: translateX(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
 }

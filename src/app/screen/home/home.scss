@@ -3,8 +3,9 @@ div.header-top-information {
     align-items: center;
     justify-content: center;
     flex-flow: column;
+    margin-bottom: 10%;
     p {
-        color: #fff;
+        color: #000;
         font-size: 1.2em;
         &:last-child {
             font-size: 1.7em;

@@ -9,4 +9,17 @@ export const link = [
         ,title: 'Extrato'
         ,icon: 'attach_money'
     },
+    {
+        to: '/produtos'
+        ,title: 'produtos'
+        ,icon: 'store'
+        ,child: [
+            {
+                to: '/produtos/liquidacao'
+                ,title: 'Liquidação'
+                ,icon: 'whatshot'
+
+            }
+        ]
+    }
 ]

@@ -20,7 +20,7 @@ const Routes = () => (
             <Route  exact path="/" component={ Home }/>
             <Route path="/extrato" component={QuemSomos} />
             <Route path="/perfil" component={() => <p>Perfil</p>} />
-            <Route path="/transferir" component={() => <p>Transferir</p>} />
+            <Route path="/produtos" component={() => <p>Produtos</p>} />
             <Route path="*" component={Notfound} />
         </Switch>
     </BrowserRouter>

@@ -15,7 +15,6 @@ export default class Sidemenu extends Component {
     }
     componentDidMount() {
         let element = document.getElementById("banner");
-        console.log(element)
         element.addEventListener( "mouseover", event => {
             this.setState( {hover: true } )
         })

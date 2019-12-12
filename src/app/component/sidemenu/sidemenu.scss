@@ -42,8 +42,8 @@
                     height: 100%;
                     overflow-y: auto;
                     .sidemenu--item{
-                        padding: 12px;
-                        margin: .39em .0;
+                        padding: 7px;
+                        margin: .19em .0;
                         display: flex;
                         width: 100%;
                         align-items: center;
@@ -56,7 +56,7 @@
                             width: 100%;
                             padding: 10px;
                             margin: .15em .19em;
-                            animation: fadeIn .3s linear .5s;
+                            animation: transform .5s;
                         }
                         &:hover {
                             background: #fff;

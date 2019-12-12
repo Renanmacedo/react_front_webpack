@@ -22,6 +22,12 @@ export default class Sidemenu extends Component {
             this.setState( { hover: false })
         })
     }
+    onHouver() {
+        
+    }
+    onHouverLeave() {
+
+    }
     render() {
         return (
             <>
@@ -36,13 +42,14 @@ export default class Sidemenu extends Component {
                                     <div className="sidemenu-list-items">
                                         {
                                             this.props.items.map((item, i) => (
-                                                <div key={i.toString()} className={`sidemenu--item ${this.state.hover ? 'sidemenu--item-effect' : ''}`} >
+                                                <div key={i.toString()} 
+                                                    className={`sidemenu--item ${this.state.hover ? 'sidemenu--item-effect' : ''}`} >
+                                                    <Icon style={ !this.state.hover ? { transform: `translateX(170px)`, animation: 'transform .5s'} : {transform: `translate(0px)`, animation: 'transform .3s'}}>{item.icon}</Icon>
                                                     <Link
                                                         key={i.toString()}
                                                         to={item.to}>
                                                         {item.title}
                                                     </Link>
-                                                    <Icon >{item.icon}</Icon>
                                                 </div>
                                             ))
                                         }

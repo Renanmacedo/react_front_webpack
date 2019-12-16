@@ -5,13 +5,13 @@ export const link = [
         ,icon: 'home'
     },
     {
-        to: '/extrato'
-        ,title: 'Extrato'
-        ,icon: 'attach_money'
+        to: '/cadastro'
+        ,title: 'Cadastro'
+        ,icon: 'person_add'
     },
     {
-        to: '/produtos'
-        ,title: 'produtos'
+        to: '/solicitacoes'
+        ,title: 'Solicitações'
         ,icon: 'store'
         ,child: [
             {

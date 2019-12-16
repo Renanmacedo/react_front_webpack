@@ -26,7 +26,7 @@ export default class Home extends Component {
     }
     UNSAFE_componentWillMount() {}
     renderItems() {
-        let items = Array.from([10, 4,8, 9, 22, 64]);
+        let items = Array.from([10, 4,8, 9, 22, 64, 89, 67, 90, 764, 653, 1094,574]);
         return items.map((element, index )=> (
             
                 <Card key={element.toString()} 

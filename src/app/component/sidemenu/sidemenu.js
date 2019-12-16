@@ -10,30 +10,27 @@ export default class Sidemenu extends Component {
         super(props);
         this.state = {
             visible: true
-            ,hover: false
+            ,effectTransition: false
         }
     }
-    componentDidMount() {
-        let element = document.getElementById("banner");
-        element.addEventListener( "mouseover", event => {
-            this.setState( {hover: true } )
-        })
-        element.addEventListener("mouseleave", event => {
-            this.setState( { hover: false })
-        })
-    }
-    onHouver() {
-        
-    }
-    onHouverLeave() {
+    componentDidMount() {}
 
+    arrowClick(e) {
+        let sideContainer = document.getElementById("banner");
+        if(!this.state.effectTransition){
+            sideContainer.style.transform = `translateX(-174px)`;
+            this.setState({ effectTransition : true });
+        }else{
+            sideContainer.style.transform = `translateX(0)`;
+            this.setState({ effectTransition : false }); 
+        }
     }
     render() {
         return (
             <>
                 {this.state.visible &&
                     <aside className="sidemenu" >
-                        <aside className={`sidemenu--container ${this.state.hover ? 'sidemenu--container-effect' : '' }`} id="banner">
+                        <aside className={`sidemenu--container`} id="banner">
                             <div className="sidemenu--logo">
                                 <img src={images.logo} alt="image" />
                             </div>
@@ -43,8 +40,8 @@ export default class Sidemenu extends Component {
                                         {
                                             this.props.items.map((item, i) => (
                                                 <div key={i.toString()} 
-                                                    className={`sidemenu--item ${this.state.hover ? 'sidemenu--item-effect' : ''}`} >
-                                                    <Icon style={ !this.state.hover ? { transform: `translateX(170px)`, animation: 'transform .5s'} : {transform: `translate(0px)`, animation: 'transform .3s'}}>{item.icon}</Icon>
+                                                    className={`sidemenu--item`} >
+                                                    <Icon style={ this.state.effectTransition ? { transform: `translateX(170px)`, animation: 'transform .5s'} : {transform: `translate(0px)`, animation: 'transform .3s'}}>{item.icon}</Icon>
                                                     <Link
                                                         key={i.toString()}
                                                         to={item.to}>
@@ -55,6 +52,12 @@ export default class Sidemenu extends Component {
                                         }
                                     </div>
                                 </nav>
+                            </div>
+                            <div className="footer-toggle">
+                                <button onClick={e => this.arrowClick(e)}>
+                                    {!this.state.effectTransition && <Icon style={{color: "#fff"}}>keyboard_arrow_left</Icon> }
+                                    {this.state.effectTransition && <Icon style={{color: "#fff"}}>keyboard_arrow_right</Icon> }
+                                </button>
                             </div>
                         </aside>
                     </aside>

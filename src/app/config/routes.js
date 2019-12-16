@@ -4,7 +4,8 @@ import Home from "../screen/home/home";
 import QuemSomos  from '../screen/about/quemsomos';
 import Header from '../component/header/header';
 import Sidemenu from '../component/sidemenu/sidemenu';
-import Notfound from '../screen/notfound/notfound'
+import Notfound from '../screen/notfound/notfound';
+import Footer from '../component/footer/footer'
 import { link } from '../config/menus';
 
 
@@ -23,6 +24,7 @@ const Routes = () => (
             <Route path="/produtos" component={() => <p>Produtos</p>} />
             <Route path="*" component={Notfound} />
         </Switch>
+        <Footer />
     </BrowserRouter>
 );
 

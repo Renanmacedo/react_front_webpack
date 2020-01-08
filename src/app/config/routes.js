@@ -16,12 +16,10 @@ const Routes = () => (
 
     <BrowserRouter>
         <Header />
-        <Sidemenu items={ link } />
+        <Sidemenu items={ link }/>
         <Switch>
             <Route  exact path="/" component={ Home }/>
-            <Route path="/extrato" component={QuemSomos} />
-            <Route path="/perfil" component={() => <p>Perfil</p>} />
-            <Route path="/produtos" component={() => <p>Produtos</p>} />
+            <Route path="/atendimento" component={QuemSomos} />
             <Route path="*" component={Notfound} />
         </Switch>
         <Footer />

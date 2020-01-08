@@ -38,14 +38,8 @@ export default class Home extends Component {
     render() {
         return (
             <Content>
-                <div className="header-top-information">
-                    <p>Seu saldo hoje é</p>
-                    <p>10.000</p>
-                </div>
                 <div className="content-items">
-                    <p>Produtos mais vistos</p>
                     <FlexLayout flexLayout={"row wrap"}>
-                        { this.renderItems() }
                     </FlexLayout>
                 </div>
             </Content>

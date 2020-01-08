@@ -1,6 +1,8 @@
 import React from 'react';
 export default  (props) => (
     <footer className="--footer">
-        <p>copy@ Renan Aquino</p>
+        <div className="items-policy">
+        </div>
+        <h3>Versão 1.0.0</h3>
     </footer>
 )

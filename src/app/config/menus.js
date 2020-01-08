@@ -5,21 +5,8 @@ export const link = [
         ,icon: 'home'
     },
     {
-        to: '/cadastro'
-        ,title: 'Cadastro'
-        ,icon: 'person_add'
+        to: '/atendimento'
+        ,title: 'Atendimento'
+        ,icon: 'ring_volume'
     },
-    {
-        to: '/solicitacoes'
-        ,title: 'Solicitações'
-        ,icon: 'store'
-        ,child: [
-            {
-                to: '/produtos/liquidacao'
-                ,title: 'Liquidação'
-                ,icon: 'whatshot'
-
-            }
-        ]
-    }
 ]

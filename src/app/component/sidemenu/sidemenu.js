@@ -19,10 +19,10 @@ export default class Sidemenu extends Component {
         let sideContainer = document.getElementById("banner");
         if(!this.state.effectTransition){
             sideContainer.style.transform = `translateX(-174px)`;
-            this.setState({ effectTransition : true });
+            this.setState({ effectTransition : true }, () => this.props.onToggle(this.state.effectTransition));
         }else{
             sideContainer.style.transform = `translateX(0)`;
-            this.setState({ effectTransition : false }); 
+            this.setState({ effectTransition : false }, () => this.props.onToggle(this.state.effectTransition)); 
         }
     }
     render() {
@@ -38,7 +38,7 @@ export default class Sidemenu extends Component {
                                 <nav className="sidemenu-inner-items">
                                     <div className="sidemenu-list-items">
                                         {
-                                            this.props.items.map((item, i) => (
+                                            this.props.items.map((item, i) => ( 
                                                 <div key={i.toString()} 
                                                     className={`sidemenu--item`} >
                                                     <Icon style={ this.state.effectTransition ? { transform: `translateX(170px)`, animation: 'transform .5s'} : {transform: `translate(0px)`, animation: 'transform .3s'}}>{item.icon}</Icon>
@@ -68,4 +68,5 @@ export default class Sidemenu extends Component {
 }
 Sidemenu.propsType = {
     items: PropsType.array
+    ,onToggle: PropsType.func
 }

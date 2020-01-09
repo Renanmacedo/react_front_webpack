@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Icon } from '@material-ui/core'
+import { Icon } from '@material-ui/core';
+import PropsType from 'prop-types';
 export default  class Header extends  React.Component {
     
     constructor(props) {
@@ -28,9 +29,9 @@ export default  class Header extends  React.Component {
     render(){
         return (
             <header className="header-wrapper">
-                    <nav className="rn-navigation">
+                    <nav className="rn-navigation" style={ this.props.navStyleWrapper ? {...this.props.navStyleWrapper} : null }>
                         <span className="menu-option" role="menu">
-                            <Icon >person</Icon>
+                            <Icon style={{color: "#fff"}}>person</Icon>
                         </span>
                         <div className="menu-items menu-items-content" id="menu" menu-visible={this.state.menuVisible.toString()}>
                             <div className="menu-item"><a href="#">Perfil</a></div>
@@ -42,3 +43,11 @@ export default  class Header extends  React.Component {
         )
     }
 };
+Header.propsType = {
+    navStyleWrapper: PropsType.oneOfType([
+        PropsType.string
+        ,PropsType.object
+        ,PropsType.bool
+        ,PropsType.number
+    ])
+}
